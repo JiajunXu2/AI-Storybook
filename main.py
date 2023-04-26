@@ -24,3 +24,9 @@ def tell_story(prompt):
     
   except Exception:
     print("Error generating story.")
+    
+# Detect input from mic
+with speech_recognition as mic:
+  print("Speech dectection is now on.")
+  audio = recognizer.listen(mic)
+  try:
