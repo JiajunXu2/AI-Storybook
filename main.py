@@ -25,6 +25,17 @@ def tell_story(prompt):
   except Exception:
     print("Error generating story.")
     
+# Makes request to Openai to generate art given prompt    
+def create_pictures(prompt):
+  try:
+    response = openai.Image.create(
+      prompt=prompt,
+      n=1,
+      size="256x256"
+    )
+    image_url = response['data'][0]['url']
+    return image_url
+    
 # Detect input from mic
 with speech_recognition as mic:
   print("Speech dectection is now on.")
