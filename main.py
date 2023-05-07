@@ -41,3 +41,10 @@ with speech_recognition as mic:
   print("Speech dectection is now on.")
   audio = recognizer.listen(mic)
   try:
+    # input successful 
+    speech_text = recognizer.recognize_google(audio)
+    print(speech_text)
+  except speech_recognition.UnknownValueError:
+    print("Could not understand.")
+  except speech_recognition.RequestError:
+    print("Request error from Google.")
