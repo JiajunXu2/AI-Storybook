@@ -37,6 +37,8 @@ def create_pictures(prompt):
     return image_url
     
 # Detect input from mic
+"""
+# Detect input from mic
 with speech_recognition as mic:
   print("Speech dectection is now on.")
   audio = recognizer.listen(mic)
@@ -48,3 +50,5 @@ with speech_recognition as mic:
     print("Could not understand.")
   except speech_recognition.RequestError:
     print("Request error from Google.")
+  
+"""
