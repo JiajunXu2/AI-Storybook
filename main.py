@@ -52,3 +52,10 @@ with speech_recognition as mic:
     print("Request error from Google.")
   
 """
+prompt = input("What kind of story would you like to hear?")
+print(prompt)
+story = tell_story(prompt)
+print(story)
+sentences = story.split(".")
+for sentence in sentences:
+  create_pictures(sentence)
